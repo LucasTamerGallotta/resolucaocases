@@ -10,9 +10,9 @@ def conectaBD():
     """
 
     # Passando as informações necessárias para criar a conexão com o MySQL
-    conn = mysql.connector.connect(user='lucas', 
+    conn = mysql.connector.connect(user='root', 
                                database='case',
-                               password='1111',
+                               password='minhasenha123',
                                host='localhost')
     return conn
 
@@ -26,8 +26,8 @@ def criaEngine():
     # Informações conectar ao Banco de Dados
     host="localhost"
     database='case'
-    user='lucas'
-    password='1111'
+    user='root'
+    password='minhasenha123'
 
     # Criando a engine que será utilizada para conectar ao Banco de Dados
     return create_engine('mysql+mysqlconnector://'+user+':'+password+'@'+host+':3306/'+database+'', echo = False)

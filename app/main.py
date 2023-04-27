@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # STEP 2
     # Definindo o diretório onde irá ocorrer a busca do .xlsx
     
-    directory = "C:\\Users\\lucas\\OneDrive\\Documentos\\resolucaocases\\sources"
+    directory = "/home/bug/Documents/resolucaocases/sources"
     funcoesArquivo.obterArquivos(directory)
 
     #STEP 3
@@ -22,4 +22,4 @@ if __name__ == "__main__":
 
     # STEP 4
     # Populando as tabelas Trusted com os dados das vendas consolidadas
-    funcoesArquivo.populaConsolidados('.\\..\\query\\queries.json')
+    funcoesArquivo.populaConsolidados('./../query/queries.json')
