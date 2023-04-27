@@ -26,4 +26,4 @@ if __name__ == "__main__":
 
     # STEP 4
     # Populando as tabelas Trusted com os dados das vendas consolidadas
-    funcoesArquivo.populaConsolidados('\\queries.json')
+    funcoesArquivo.populaConsolidados('.\\..\\query\\queries.json')
