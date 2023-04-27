@@ -1,16 +1,12 @@
 # Importando as bibliotecas necessárias
 
-import pandas as pd
-from mysql.connector import Error
-from sqlalchemy import create_engine
-import mysql
 import funcoesArquivo
 import criaTabelas
 
 
 if __name__ == "__main__":
     
-    #STEP 1 CRIAR A TABELA DE RAW DATA
+    #STEP 1
     # Criando a tabela que irá conter o raw data
     criaTabelas.criarRawTable()
     
