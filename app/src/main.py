@@ -1,23 +1,19 @@
 # Importando as bibliotecas necessárias
 
-import pandas as pd
-from mysql.connector import Error
-from sqlalchemy import create_engine
-import mysql
 import funcoesArquivo
 import criaTabelas
 
 
 if __name__ == "__main__":
     
-    #STEP 1 CRIAR A TABELA DE RAW DATA
+    #STEP 1
     # Criando a tabela que irá conter o raw data
     criaTabelas.criarRawTable()
     
     # STEP 2
     # Definindo o diretório onde irá ocorrer a busca do .xlsx
     
-    directory = "C:\\Users\\lucas\\OneDrive\\Documentos\\resolucaocases\\sources"
+    directory = "/home/bug/Documents/resolucaocases/sources"
     funcoesArquivo.obterArquivos(directory)
 
     #STEP 3
@@ -26,4 +22,4 @@ if __name__ == "__main__":
 
     # STEP 4
     # Populando as tabelas Trusted com os dados das vendas consolidadas
-    funcoesArquivo.populaConsolidados('\\queries.json')
+    funcoesArquivo.populaConsolidados('./../query/queries.json')
