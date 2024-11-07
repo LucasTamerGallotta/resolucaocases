@@ -8,7 +8,7 @@ def setSchema(df):
     """
     => Função utilizada para setar um schema para os data frames que são lidos.
     :param df: Pandas Data Frame que foi lido pela função lerArquivos
-    :return: Retorna um Pandas Data Frame com o seu schema setado 
+    :return: Retorna um Pandas Data Frame com o seu schema setado
 
     """ 
     return df.astype(dtype= {"ID_MARCA":"int64","MARCA":"object","ID_LINHA":"int64","LINHA":"object","DATA_VENDA":"object","QTD_VENDA":"int64"})
