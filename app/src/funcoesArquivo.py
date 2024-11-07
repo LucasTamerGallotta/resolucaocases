@@ -4,7 +4,7 @@ import json
 import ingestoes
 
 
-def setSchema(df):
+def setSchema(df:pd.DataFrame) -> pd.DataFrame:
     """
     => Função utilizada para setar um schema para os data frames que são lidos.
     :param df: Pandas Data Frame que foi lido pela função lerArquivos
@@ -32,7 +32,7 @@ def setSchema(df):
 #     print(f"Upload do arquivo {file} realizado com sucesso!")
 
 
-def obterArquivos(directory):
+def obterArquivos(directory:str):
     """ 
     => Função utilizada para buscar por todos os arquivos Excel (.xlsx) de um diretório específico
     :param directory: Diretório no qual a busca pelo arquivo Excel será realizada 
@@ -47,7 +47,7 @@ def obterArquivos(directory):
         lerArquivos(file)
 
 
-def lerArquivos(file):
+def lerArquivos(file:str):
     """
     => Função utilizada para ler um arquivo Excel (.xlsx), converter para um Pandas Data Frame,
     setar o seu schema e carregar na camada Raw data
@@ -66,7 +66,7 @@ def lerArquivos(file):
     ingestoes.bulkUpload(df, file)
 
 
-def populaConsolidados(arqJson):
+def populaConsolidados(arqJson:str):
   """
   => Função que lê arquivo JSON que contém as tabelas da camada Trusted e os 
   scripts que serão utilizados para alimentá-las

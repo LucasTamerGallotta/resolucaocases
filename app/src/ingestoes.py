@@ -1,13 +1,12 @@
 import pandas as pd
 import funcoesConexao
 
-def bulkUpload(df,file):
+def bulkUpload(df:pd.DataFrame,file:str):
     """ 
     => Função utilizada para subir os dados brutos na tabela raw_bases do MySQL 
     :param df: Pandas Data Frame com o schema já setado
     :param file: Arquivo que está alimentando o Pandas Data Frame atual
     :return: Sem retorno
-
     """
     
     # Criando a engine que será utilizada para conectar ao Banco de Dados
@@ -18,7 +17,7 @@ def bulkUpload(df,file):
     print(f"Upload do arquivo {file} realizado com sucesso!")
 
 
-def executaQuerysConsolidados(name,query):
+def executaQuerysConsolidados(name:str,query:str):
         """ 
         => Função utilizada para realizar a ingestão dos dados na camada Trusted, a partir
         da camada Raw.

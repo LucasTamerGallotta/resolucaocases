@@ -30,7 +30,7 @@ def criarRawTable():
   # Fecheando a conexão com o Banco de Dados
   conn.close()
 
-def CriaTabelasVendasConsolidadas(table_name,table_name2,table_name3,table_name4):
+def CriaTabelasVendasConsolidadas(table_name:str,table_name2:str,table_name3:str,table_name4:str):
     """ 
     => Função utilizada para criar as tabelas da camada Trusted, que contém os dados filtrados 
     a partir da tabela raw_bases

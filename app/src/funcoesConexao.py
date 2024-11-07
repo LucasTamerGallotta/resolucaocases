@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 import mysql
 import json
 
-def setInfosConect():
+def setInfosConect() -> dict[str]:
     """
     => Função utilizada para obter as informações necessárias para conectar
     no Banco de Dados
@@ -14,7 +14,7 @@ def setInfosConect():
         conexao = json.load(f)
     return conexao
 
-def conectaBD():
+def conectaBD() -> mysql.connector.connect:
     """ 
     => Função utilizada para criar a conexão no banco de dados MySQL
     :return: Retorna a variável de conexão com o banco
@@ -32,7 +32,7 @@ def conectaBD():
     return conn
 
 
-def criaEngine():
+def criaEngine() -> create_engine:
     """
     => Função que cria a engine para realizar a conexão ao banco de dados
     :return: Returna a engine que será utilizada para as cargas de dados
